@@ -7,15 +7,10 @@ contract HelloWorld {
     // you can instantiate state variables as either public or private
     uint public balance;
 
-    /*mapping is the solidity equivalent of building a hash table. Given that this language is built around blockchain/ethereum.
-    it has address as a native data type*/
-    /*This is a map of all balances in the system where it takes an address and stores an associated uint*/
-    mapping (address => uint) balances;
-
     // Constructor
     // Runs once on contract creation (a lot like java)
     // Runs on deployment and never runs again
-    function helloWorld(){
+    function helloWorld(){ //was having some trouble interacting w/this. entirely possible my mistake in the Constructor could be the source of these problems
       /*Every operation costs gas to run Computations are cheaper than storing data on the blockchain because it does not need to write to each node of the chain*/
       /*Calls to hit this balance are free (they requre no gas), functions which mutate
       the blockchain are not free.*/
